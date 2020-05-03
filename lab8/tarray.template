@@ -1,0 +1,65 @@
+#ifndef TARRAY_TEMPLATE
+#define TARRAY_TEMPLATE
+
+template <class T>
+Tarray<T>::Tarray(){
+    capacity = 5;
+    current_index = 0;
+    used = 0;
+    data = new T[capacity];
+}
+
+template <class T>
+void Tarray<T>::add(T item){
+    if(used + 1 == capacity){
+        resize();
+    }
+    data[used] = item;
+    used++;
+}
+
+template <class T>
+void Tarray<T>::start(){
+    current_index = 0;
+}
+
+template <class T>
+bool Tarray<T>::is_item()const{
+    if ( current_index != used){
+        return true;
+    }
+    return false;
+}
+
+template <class T>
+void Tarray<T>::advance(){
+    current_index += 1;
+}
+
+template <class T>
+T Tarray<T>::current()const{
+    return data[current_index];
+}
+
+template <class T>
+void Tarray<T>::remove_current(){
+    T tmp;
+    for(size_t i = current_index; i < used; i++){
+        tmp = data[i];
+        data[i] = data[i + 1];
+        data[i + 1] = tmp;
+    }
+    used--;
+}
+
+template <class T>
+void Tarray<T>::resize(){
+    T * tmp;
+    tmp = new T[capacity + 5];
+    std::copy(data, data + used, tmp);
+    delete [] data;
+    data = tmp;
+    capacity += 5;
+}
+
+#endif

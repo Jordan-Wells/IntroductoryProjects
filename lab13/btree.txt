@@ -1,0 +1,16 @@
+Script started on Tue Apr 21 19:37:03 2020
+[1m[7m%[27m[1m[0m                                                                   [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab13 % [K[?2004h../a.ou    .  aa.out[?2004l
+zsh: command not found: a.out
+[1m[7m%[27m[1m[0m                                                                   [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab13 % [K[?2004h../a.out[?2004l
+Enter name to search: 
+K Matthew
+Your search appears 7 times.
+There are 51 names larger than this in the list.
+[1m[7m%[27m[1m[0m                                                                   [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab13 % [K[?2004h./a.out[?2004l
+Enter name to search: 
+Jessical 
+Your search appears 1 times.
+There are 90 names larger than this in the list.
+[1m[7m%[27m[1m[0m                                                                   [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab13 % [K[?2004h[?2004l
+
+Script done on Tue Apr 21 19:38:00 2020

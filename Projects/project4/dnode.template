@@ -1,0 +1,44 @@
+//include "dnode.h"
+
+#ifndef DNODE_TEMPLATE
+#define DNODE_TEMPLATE
+
+template <class L>
+Dnode<L>::Dnode(){
+    prevField = NULL;
+    nextField = NULL;
+}
+template <class L>
+Dnode<L>::Dnode(L * data){
+    current = data;
+    prevField = NULL;
+    nextField = NULL;
+
+}
+template <class L>
+L & Dnode<L>::data(){
+    return current;
+}
+template <class L>
+Dnode<L> * Dnode<L>::next(){
+    return nextField;
+}
+template <class L>
+Dnode<L> * Dnode<L>::prev(){   
+    return prevField;
+}
+
+template <class L>
+void Dnode<L>::set_data(L data){
+    current = data;
+}
+template <class L>
+void Dnode<L>::set_next(Dnode * data){
+    nextField = data;
+}
+template <class L>
+void Dnode<L>::set_prev(Dnode * data){
+    prevField = data;
+}
+
+#endif

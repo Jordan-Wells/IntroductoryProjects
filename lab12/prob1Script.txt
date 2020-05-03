@@ -1,0 +1,15 @@
+Script started on Tue Apr 14 20:09:49 2020
+[1m[7m%[27m[1m[0m                                                                                          [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab12 % [K[?2004hgg++ -wa  Wall prob1Main.cc[?2004l
+[1m[7m%[27m[1m[0m                                                                                          [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab12 % [K[?2004h../a.out[?2004l
+Please input an int decimal number:30 0
+
+This number in base 2 is:11110
+This number in base 3 is:1010
+This number in base 7 is:42[1m[7m%[27m[1m[0m                                                                                          [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab12 % [K[?2004h./a.out[?2004l
+Please input an int decimal number:40
+
+This number in base 2 is:101000
+This number in base 3 is:1111
+This number in base 7 is:55[1m[7m%[27m[1m[0m                                                                                          [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab12 % [K[?2004h[?2004l
+
+Script done on Tue Apr 14 20:10:55 2020

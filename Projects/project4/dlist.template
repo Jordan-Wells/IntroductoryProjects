@@ -1,0 +1,281 @@
+//#include "dlist.h"
+#ifndef DLIST_TEMPLATE
+#define DLIST_TEMPLATE
+template<class L>
+dlist<L>::dlist(){
+    head = NULL;
+    tail = NULL;
+}
+template<class L>
+dlist<L>::~dlist(){
+    Dnode<L> * ptr = head;
+    if(head == NULL && tail == NULL){
+        return;
+    }   
+    if(head == tail){
+        delete head;
+    }
+    while(head != NULL){
+        ptr = head;
+        head = head -> next();
+        delete ptr;
+    }
+
+    
+}
+template<class L>
+dlist<L>::dlist(dlist<L> & rhs){
+    head = tail = NULL;
+    if (rhs.head == NULL){
+        return;
+    }
+    else{
+        Dnode<L> * added = rhs.head;
+        if(head == NULL){
+            head = new Dnode<L>; 
+        } 
+        Dnode<L> * adding = head;
+        Dnode<L> * hold;
+        while(added != NULL){
+            if(adding == NULL){
+                adding = new Dnode<L>;
+            }
+            adding -> set_data(added -> data());
+            tail = adding;
+            if(hold != NULL){
+                adding -> set_prev(hold);
+            }
+            hold = adding;
+            if(added -> next() != NULL){
+                adding -> set_next(new Dnode<L>);
+            }
+            adding = adding -> next();
+            added = added -> next();
+        }
+        return;
+    }
+
+    // Dnode<L> * ptr;
+    // Dnode<L> * keepHead;
+    // Dnode<L> * previous;
+    
+    // if(list.head == NULL){
+    //     return;
+    // }
+    // ptr = list.head;
+
+    // if(head == NULL){
+    //     head = new Dnode<L>;
+    // }
+
+    // keepHead = head;
+    // previous = head;
+    // if(list.head != NULL){
+    //     head -> set_data(list.head -> data());
+    //     if(list.head -> next() != NULL){
+    //         head -> set_next(new Dnode<L>);
+    //     }
+    //     head = head -> next();
+    //     list.head = list.head -> next();
+    // }
+
+    // while(list.head != NULL){
+    //     head -> set_data(list.head -> data());
+
+    //     if(list.head -> prev() != NULL){
+    //         head -> set_prev(previous);
+    //     }
+    //     previous = head;
+    //     head = head -> next();
+
+    //     if(list.head -> next() != NULL ){
+    //         head -> set_next(new Dnode<L>);
+    //     }
+    //     list.head = list.head -> next();
+    // }
+    
+    // tail = head;
+    // head = keepHead;
+    // list.head = ptr;
+}
+template<class L>
+dlist<L>& dlist<L>::operator = (dlist<L> & rhs){
+   if(this == &rhs) return *this;
+    Dnode<L> * rmv;
+    while(head != NULL){
+        rmv = head;
+        head = head -> next();
+        delete rmv;
+    }
+
+    if (rhs.head == NULL){
+        return *this;
+    }
+    else{
+        Dnode<L> * added = rhs.head;
+        if(head == NULL){
+            head = new Dnode<L>;
+        }
+        Dnode<L> * adding = head;
+        Dnode<L> * hold;
+        while(added != NULL){
+            if(adding == NULL){
+                adding = new Dnode<L>;
+            }
+            adding -> set_data(added -> data());
+            tail = adding;
+            if(hold != NULL){
+                adding -> set_prev(hold);
+            }
+            hold = adding;
+            if(added -> next() != NULL){
+                adding -> set_next(new Dnode<L>);
+            }
+            adding = adding -> next();
+            added = added -> next();
+        }
+        return *this;
+    }
+}
+template<class L>
+void dlist<L>::front_insert(L data){
+    Dnode<L> * newNode = new Dnode<L>;
+    newNode -> set_data(data);
+    if(head == NULL){
+        head = tail = newNode;
+        return;
+    }
+    head -> set_prev(newNode);
+    newNode -> set_next(head);
+    head = head -> prev();
+}
+template<class L>
+void dlist<L>::rear_insert(L data){
+    Dnode<L> * newNode = new Dnode<L>;
+    newNode -> set_data(data);
+    if(head == NULL){
+        head = tail = newNode;
+        return;
+    }
+    tail -> set_next(newNode);
+    newNode -> set_prev(tail);
+    tail = tail -> next();
+}
+template<class L>
+void dlist<L>::front_remove(){
+    if(head == NULL){
+        return;
+    }
+    if(head == tail){
+        delete head;
+        head = tail =NULL;
+        return;
+    }
+    Dnode<L> * holdHead = head;
+    head = head -> next();
+    head -> set_prev(NULL);
+    delete holdHead;
+}
+template<class L>
+void dlist<L>::rear_remove(){
+    if(head == NULL){
+        return;
+    }
+    if(head == tail){
+        delete head;
+        head = tail =NULL;
+        return;
+    }
+    Dnode<L> * holdTail = tail;
+    tail = tail -> prev();
+    tail -> set_next(NULL);
+    delete holdTail;
+}
+template<class L>
+void dlist<L>::insert_before(iterator spot, L data){
+    Dnode<L> * newNode = new Dnode<L>;
+    newNode -> set_data(data);
+    if(head == NULL){
+        head = tail = newNode;
+    }
+    Dnode<L> * holdSpot = spot.now();
+    if(holdSpot == head){
+        head = newNode;
+    }
+    Dnode<L> * holdPrev = holdSpot -> prev();
+    if(holdPrev != NULL){
+        holdPrev -> set_next(newNode);
+    }
+    holdSpot -> set_prev(newNode);
+    newNode -> set_next(holdSpot);
+    if(holdPrev != NULL){
+        newNode -> set_prev(holdPrev);
+    }
+}
+template<class L>
+void dlist<L>::insert_after(iterator spot, L data){
+    Dnode<L> * newNode = new Dnode<L>;
+    newNode -> set_data(data);
+    if(head == NULL){
+        head = tail = newNode;
+    }
+    //iterator i = head;
+    Dnode<L> * holdSpot = head;
+    holdSpot = spot.now();
+    if(holdSpot == tail){
+        tail = newNode;                                                      
+    }
+    // while(i != spot){
+    //     holdSpot = holdSpot -> next();
+    //     ++i;
+    // }
+    Dnode<L> * holdNext = holdSpot -> next();
+    if(holdNext != NULL){
+        holdNext -> set_prev(newNode);
+    }
+    holdSpot -> set_next(newNode);
+    if(holdNext != NULL){
+        newNode -> set_next(holdNext);
+    }
+    
+    newNode -> set_prev(holdSpot);
+}
+template<class L>
+void dlist<L>::remove(iterator spot){
+    Dnode<L> * holdSpot = head;
+    //iterator i = head;
+    holdSpot = spot.now();
+    // while(i != spot){
+    //     holdSpot = holdSpot -> next();
+    //     ++i;
+    // }
+    Dnode<L> * holdPrev = holdSpot -> prev();
+    Dnode<L> * holdNext = holdSpot -> next();
+    
+    if(holdPrev != NULL){
+        holdPrev -> set_next(holdNext);
+    }
+    if(holdNext != NULL){
+        holdNext -> set_prev(holdPrev);
+    }
+    if(head == holdSpot){
+        head = holdNext;
+    }
+    if(tail == holdSpot){
+        tail = holdPrev;
+    }
+    delete holdSpot;
+}
+template<class L>
+int dlist<L>::size(){  
+    int size = 0;
+    Dnode<L> * cursor = head;
+    while(cursor != NULL){
+        size += 1;
+        cursor = cursor -> next();
+    }
+    return size;
+}
+
+
+#endif

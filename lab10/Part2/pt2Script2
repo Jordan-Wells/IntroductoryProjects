@@ -1,0 +1,20 @@
+Script started on Tue Mar 31 20:53:37 2020
+[1m[7m%[27m[1m[0m                                                                [0m[27m[24m[Jjordanwells@Jordans-MBP Part2 % [K[?2004h./a.out[?2004l
+Enter Description: Go Shopping
+Enter Priority: 1
+Enter Description: Go to Doctor
+Enter Priority: 5
+Enter Description: Go to Work
+Enter Priority: 4
+Enter Description: Finish Program
+Enter Priority: 3
+Enter Description: Get Dog  
+Enter Priority: 2
+'Go to Doctor' 5
+'Go to Work' 4
+'Finish Program' 3
+'Get Dog' 2
+'Go Shopping' 1
+[1m[7m%[27m[1m[0m                                                                [0m[27m[24m[Jjordanwells@Jordans-MBP Part2 % [K[?2004h[?2004l
+
+Script done on Tue Mar 31 20:54:29 2020

@@ -1,0 +1,22 @@
+Script started on Tue Apr 14 20:11:16 2020
+[1m[7m%[27m[1m[0m                                                                                          [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab12 % [K[?2004hgg++ -Wal l prob2Main.t cc[?2004l
+[1m[7m%[27m[1m[0m                                                                                          [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab12 % [K[?2004h../a.out[?2004l
+Enter a string:abcdef
+Now enter two numbers that are within the bounds of the string.1 4
+This is how your words look now:
+aedcbf
+[1m[7m%[27m[1m[0m                                                                                          [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab12 % [K[?2004haabcdefghijk[?2004l
+zsh: command not found: abcdefghijk
+[1m[7m%[27m[1m[0m                                                                                          [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab12 % [K[?2004habcdefghijk[11D./a.out    [?2004l
+Enter a string:abcdefghil k k
+Now enter two numbers that are within the bounds of the string.28  8
+This is how your words look now:
+abihgfedck
+[1m[7m%[27m[1m[0m                                                                                          [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab12 % [K[?2004haabcddcba[8D./a.out [?2004l
+Enter a string:abcddcba
+Now enter two numbers that are within the bounds of the string.4 7
+This is how your words look now:
+abcdabcd
+[1m[7m%[27m[1m[0m                                                                                          [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab12 % [K[?2004h[?2004l
+
+Script done on Tue Apr 14 20:13:34 2020

@@ -1,0 +1,46 @@
+Script started on Tue Apr  7 16:25:42 2020
+[1m[7m%[27m[1m[0m                                                                [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab11 % [K[?2004hgg++ -Wall pt1main.cc[?2004l
+[1m[7m%[27m[1m[0m                                                                [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab11 % [K[?2004h../a.out[?2004l
+Enter a number: 23
+The even numbers counting to there:
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+Enter a number: 18
+The even numbers counting to there:
+2
+4
+6
+8
+10
+12
+14
+16
+18
+Enter a number: -2
+The even numbers counting to there:
+[1m[7m%[27m[1m[0m                                                                [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab11 % [K[?2004hgg++ -Wall pt2main.cc[?2004l
+[1m[7m%[27m[1m[0m                                                                [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab11 % [K[?2004h../a.ot ut[?2004l
+Enter a number between 1 and 30 and see the stars.
+5
+*
+**
+***
+****
+*****
+*****
+****
+***
+**
+*
+[1m[7m%[27m[1m[0m                                                                [0m[27m[24m[Jjordanwells@Jordans-MacBook-Pro lab11 % [K[?2004h[?2004l
+
+Script done on Tue Apr  7 16:27:13 2020
