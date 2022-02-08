@@ -1,0 +1,2 @@
+# Introductory Computer Science Projects
+This is a comprehensive repository of projects and labs that I completed in the Spring of the 2019-2020 school year. Since taking this course, I have completed a plethora of more advanced projects that better represent my current understanding of computer science, but I feel this repository is still valuable as a reference point through which one can evaluate my development as a software engineer.
