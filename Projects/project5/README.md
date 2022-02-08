@@ -10,7 +10,3 @@ For a container you should use the list class from the STL. You will be using an
 Since our software is frequently shut-down at night we need to keep a permanent record of all the homes in the list, so there should be a mechanism that writes the homes out to a file. When the program begins running it should look for the file and begin by inserting all the homes that it finds there into the container. Your submission should include a datafile that allows the program to do this.
 
 In some ways this project is simple. The child classes contain little more than a default constructor and virtual input and output functions that work with that child's particular member variables, and you are not required to implement the container. But it does demonstrate a powerful programming tool and some profound features of C++. (And don't procrastinate too much because the file I/O can be tricky.) Also variety and imagination in the creation of the child classes is a critical grading criterion. Do not be lazy. 
-
-Included with your project submission should be a UML class diagram for the project, generated through the ArgoUML© software, and saved as a .zargo file. This is worth five out of the fifty points for the overall project. 
-
-Your Blackboard submission of this project should include all the files that I need to compile and run the program as well as a sample data file of some homes your clients have order. It is due at 11:59 p.m. on Tuesday, April 7th.	
