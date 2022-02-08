@@ -31,6 +31,3 @@ Your class will have:
 Also, all the data is saved to a back-up file that created when the program quits and then automatically reloaded (if the file is present) when the program restarts, thus saving the user from re-typing their data upon each entry. This data should be saved in the same format as I show in the runlog.txt file that I have given you.
 
 I have written a main that calls each of these functions and you are to use my main, not one that you have written yourself. Notice that I have commented out each function call to encourage you to develop the project in stages.
-
-Your submission should include all source files including the ones that I have given you, and a sample data file of at least ten entries. Blackboard submission of this project is due at 11:59 p.m. on Sunday, February 2nd.
-
