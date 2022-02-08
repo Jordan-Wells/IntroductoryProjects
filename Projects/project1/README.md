@@ -1,4 +1,4 @@
-# Project Assignment
+# Project Outline Given by Professor
 As a runner I have, for years, kept a journal, in which I record the time and distance of every run. (I also record some other information, such as whom I was running with, and the weather, but we’re not going to worry about that here.) For this project I have designed a class, built on the MyTime class that you used in Lab 1, to hold the information about a single run. Your assignment is to development a running journal, that is, a container class for my runs.
 Begin by copying MyTime.h, MyTime.cc, runtime.h, main.cc and runlog.txt into your working directory. You can get them from the Blackboard for this assignment or by copying them from the directory ~jdolan/cs2401/projects/project1 on prime.
 
